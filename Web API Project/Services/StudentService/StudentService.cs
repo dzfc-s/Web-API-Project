@@ -62,11 +62,13 @@ namespace Web_API_Project.Services.UserService
 
             student.FirstName = (request.FirstName == "string" || request.FirstName == "") ? student.FirstName : request.FirstName;
             student.LastName = (request.LastName == "string" || request.LastName == "") ? student.LastName : request.LastName;
+            student.IndexNumber = (request.IndexNumber == "string" || request.IndexNumber == "") ? student.IndexNumber : request.IndexNumber;
+            student.DateOfBirth = (request.DateOfBirth == DateTime.Now || request.DateOfBirth.ToString() == "") ? student.DateOfBirth: request.DateOfBirth;
+            student.YearOfStudy = (request.YearOfStudy == 0 ) ? student.YearOfStudy : request.YearOfStudy;
 
             await _context.SaveChangesAsync();
 
             return await _context.Students.ToListAsync();
-
         }
     }
 }
