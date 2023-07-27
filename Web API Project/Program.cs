@@ -2,6 +2,7 @@ using Web_API_Project.Data;
 using Web_API_Project.Interfaces;
 using Web_API_Project.Models;
 using Web_API_Project.Services.AssistantService;
+using Web_API_Project.Services.ProfessorService;
 using Web_API_Project.Services.UserService;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,7 +15,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUserService<Student>, StudentService>();
 builder.Services.AddScoped<IUserService<Assistant>, AssistantService>();
-//builder.Services.AddScoped<IUserService, StudentService>();
+builder.Services.AddScoped<IUserService<Professor>, ProfessorService>();
 builder.Services.AddDbContext<DataContext>();
 
 var app = builder.Build();
