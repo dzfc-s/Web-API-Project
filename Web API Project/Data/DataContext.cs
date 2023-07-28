@@ -18,7 +18,7 @@ namespace Web_API_Project.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer("Data Source=.\\MSSQLSERVER16; Initial Catalog=WEBApiDB2; Integrated Security=true; TrustServerCertificate=true");
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-NKAGACN; Initial Catalog=WEBApiDB2; Integrated Security=true; TrustServerCertificate=true");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

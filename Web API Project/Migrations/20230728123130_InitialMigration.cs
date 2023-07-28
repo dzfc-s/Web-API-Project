@@ -49,10 +49,6 @@ namespace Web_API_Project.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
-                    WorkingYears = table.Column<int>(type: "int", nullable: false),
-                    SubjectTeaching = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     IsRegular = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>

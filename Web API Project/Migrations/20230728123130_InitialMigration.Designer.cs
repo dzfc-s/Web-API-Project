@@ -12,7 +12,7 @@ using Web_API_Project.Data;
 namespace Web_API_Project.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230727215710_InitialMigration")]
+    [Migration("20230728123130_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />

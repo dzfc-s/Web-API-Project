@@ -2,7 +2,7 @@
 {
     public class Assistant : User
     {
-        public int WorkingYears { get; set; }
-        public string SubjectTeaching { get; set; }
+        public int WorkingYears { get; set; } = 0;
+        public string SubjectTeaching { get; set; } = string.Empty;
     }
 }
